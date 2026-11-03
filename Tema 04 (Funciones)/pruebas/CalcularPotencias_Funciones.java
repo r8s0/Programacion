@@ -9,7 +9,7 @@ public class CalcularPotencias_Funciones {
     /* Esta función calcula la potencia de base elevado a exponente*/
     /* ************************************************************** */
     
-    static int potencia(int base, int exponente){
+    public static int potencia(int base, int exponente){
             
         int resultado = 1;
         

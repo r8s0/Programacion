@@ -2,7 +2,7 @@ package hojaEjercicios_Funciones;
 
 import java.util.Scanner;
 
-public class FunciónRango_DosNúmerosEnteros {
+public class E02_FunciónRango_DosNúmerosEnteros {
     
     /* ************************** muestraRango ************************** */
     /* Esta función calcula los números en el rango establecido.          */

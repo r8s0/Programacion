@@ -2,7 +2,7 @@ package hojaEjercicios_Funciones;
 
 import java.util.Scanner;
 
-public class FunciónSuma_DosNúmerosReales {
+public class E01_FunciónSuma_DosNúmerosReales {
     
     /* ************************** suma ************************** */
     /* Esta función calcula la suma de dos números reales         */

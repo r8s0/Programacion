@@ -13,3 +13,7 @@
 - Creados_IA -> Ejercicios de bucles creados por IA
 - Ejercicios_Libro_3 -> Ejercicios encontrados en el Tema 3 del libro.
 - hojaEjercicios_Bucles -> Ejercicios más complejos de bucles.
+
+## Tema 4 (Funciones)
+- hojaEjercicios_Funciones -> Ejercicios más complejos de funciones
+- pruebas -> Ejercicios de prueba para comprobar como funcionan las funciones

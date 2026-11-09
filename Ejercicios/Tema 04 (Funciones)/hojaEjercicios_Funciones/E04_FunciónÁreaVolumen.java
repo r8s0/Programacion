@@ -1,4 +1,4 @@
-package com.mycompany.tema_04;
+package hojaEjercicios_Funciones;
 
 import java.util.Scanner;
 
@@ -6,9 +6,9 @@ public class E04_FunciónÁreaVolumen {
     
     /* ************************** menuOpciones ************************** */
     /* Esta función muestra el menú de opciones.          */
-    /*  ENTRADA -> 1 número int
-        SALIDA -> Nada
-        PROCESO -> Leer elección del usuario.                            */
+    /*  ENTRADA -> Nada
+        SALIDA -> Muestra las opciones.
+        PROCESO -> Imprimir el menú de opciones.                            */
     /* ****************************************************************** */
     
     public static void menuOpciones(){
@@ -22,10 +22,11 @@ public class E04_FunciónÁreaVolumen {
     }
     
     /* ************************** calculaArea *************************** */
-    /* Esta función calcula el área de un cilindro.          */
+    /* Esta función calcula el área de un cilindro.                       */
     /*  ENTRADA -> 2 número int
-        SALIDA -> Nada
-        PROCESO -> Leer radio y altura escrita por el usuario.                            */
+        SALIDA -> Imprimir el área del cilindro con las medidas del radio
+        y la altura
+        PROCESO -> Leer radio y altura escrita por el usuario             */
     /* ****************************************************************** */
     
     public static void calculaArea(){
@@ -49,10 +50,11 @@ public class E04_FunciónÁreaVolumen {
     }
     
     /* ************************** calculaVolumen ************************** */
-    /* Esta función calcula el volumen de un cilindro.          */
+    /* Esta función calcula el volumen de un cilindro.                      */
     /*  ENTRADA -> 2 número int
-        SALIDA -> Nada
-        PROCESO -> Leer radio y altura escrita por el usuario.                            */
+        SALIDA -> Imprimir el volumen del cilindro con las medidas del radio
+        y la altura                                                         
+        PROCESO -> Leer radio y altura escrita por el usuario.              */
     /* ******************************************************************** */
     
     public static void calculaVolumen(){
@@ -77,7 +79,8 @@ public class E04_FunciónÁreaVolumen {
     /* ************************** main ************************** */
     /* Esta función es la función principal.                      */
     /*      ENTRADA -> pedir al usuario 1 número int entre 1 y 3
-            SALIDA -> Nada  
+            SALIDA -> Mostrar área/volumen según la opción del 
+            usuario
             PROCESO: Llamar a la función necesaria en cada opción 
             seleccionada                                          */
     /* ********************************************************** */

@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.tema_04;
+package hojaEjercicios_Funciones;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Usuario1
- */
 public class E03_FunciónÁreaVolumen {
     
     /* ************************** menuOpciones ************************** */

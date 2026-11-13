@@ -14,18 +14,15 @@ public class E06_FunciónVocal_Carácter {
     public static boolean esVocal(char letra){
         boolean esVocal;
         
-        switch(letra) {
-            if (letra) {
-                case a, e, i, o, u -> {
-                esVocal = true;
-            }
-            else {
-                esVocal;
-            }
-                
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' || letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
+        esVocal = true;
         }
-        
+        else{
+        esVocal = false;
+        }
+        return esVocal;
     }
+        
     
     /* ************************** calculaArea *************************** */
     /* Esta función calcula el área de un cilindro.                       */
@@ -44,9 +41,9 @@ public class E06_FunciónVocal_Carácter {
         char letra;
         
         System.out.println("Introduzca una letra: ");
-        letra = sc.next();
+        letra = sc.next().charAt(0);
         
-        esVocal(letra);
+        boolean resultado = esVocal(letra);
+        System.out.println("La letra " + letra + " es vocal?: " + resultado);
     }    
-}
 }

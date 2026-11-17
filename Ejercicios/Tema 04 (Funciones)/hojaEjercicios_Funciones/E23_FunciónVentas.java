@@ -3,7 +3,15 @@ import java.util.Scanner;
 
 public class E23_FunciónVentas {
     
+    /**
+     * Función mostrarMenu
+     * @return opcion
+     * ENTRADA: pedir "opcion"
+     * PROCESO: se debe leer la opción introducida por el usuario
+     * SALIDA: imprime el menú de opciones y devuelve "opción"
+     */
     static int mostrarMenu(){
+        
         int opcion;
         Scanner sc = new Scanner (System.in);
         
@@ -24,9 +32,18 @@ public class E23_FunciónVentas {
         System.out.println("");
         
         return opcion;
+        
     }
     
+    /**
+     * Función agregarVenta
+     * @return valorVenta
+     * ENTRADA: pedir "valorVenta"
+     * PROCESO: validar que el precio es 0 o positivo para registrar una venta
+     * SALIDA: imprimir mensaje "Venta registrada" y devuelve "valorRenta"
+     */
     static double agregarVenta(){
+        
         Scanner sc = new Scanner(System.in);
         double valorVenta;
         
@@ -42,19 +59,47 @@ public class E23_FunciónVentas {
         System.out.println("");
         
         return valorVenta;
+        
     }
     
+    /**
+     * Función mostrarTotalVentas
+     * @param total 
+     * ENTRADA: dan variable "total" de tipo double
+     * PROCESO: nada
+     * SALIDA: imprimir el dinero total acumulado
+     */
     static void mostrarTotalVentas(double total){
+        
         System.out.println("El total acumulado de ventas es: " + total + " euros.");
         System.out.println("");
+        
     }
     
+    /**
+     * Función mostrarNumeroVentas
+     * @param contadorVentas 
+     * ENTRADA: dan variable "contadorVentas" de tipo int
+     * PROCESO: nada
+     * SALIDA: imprimir el número de ventas realizadas
+     */
     static void mostrarNumeroVentas(int contadorVentas){
+        
         System.out.println("Se han registrado " + contadorVentas + " ventas.");
         System.out.println("");
+        
     }
     
+    /**
+     * Función principal
+     * @param args 
+     * ENTRADA: nada
+     * PROCESO: llamar a las funciones necesarias en función de la opción elegida,
+     añadir contador por cada venta añadida, y salir del programa.
+     * SALIDA: nada
+     */
     public static void main(String[] args){
+        
         double total = 0;
         int contadorVentas = 0;
         

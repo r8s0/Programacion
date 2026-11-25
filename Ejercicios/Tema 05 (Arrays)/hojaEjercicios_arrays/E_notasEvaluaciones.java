@@ -10,72 +10,65 @@ public class E_notasEvaluaciones {
     
     static void leerNotas(double[] notas, Scanner sc){
         
-        
-        double nota1, nota2, nota3;
-        
-        boolean valido = false;
-        
-        while (!valido){
-            try{
-                System.out.print("Introduce la nota 1: ");
-                nota1 = sc.nextDouble();
-                if (nota1 >= 0 && nota1 <= 10){
-                    valido = true;
+        for(int i = 0; i < notas.length; i++){
+            
+            boolean valido = false;
+            
+            while (!valido){
+                
+                try{
+                    System.out.print("Introduce la nota " + (i + 1) + ":");
+                    notas[i] = sc.nextDouble();
+                    if (notas[i] >= 0 && notas[i] <= 10){
+                        valido = true;
+                    }
+                    else{
+                        System.out.println("La nota tiene que ser entre 0 y 10.");
+                    }
+                }catch (InputMismatchException e){
+                    System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
+                    sc.nextLine();
                 }
-                else{
-                    System.out.println("La nota tiene que ser entre 0 y 10.");
-                }
-            }catch (InputMismatchException e){
-                System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
-                sc.nextLine();
-            } 
-        }
-        
-        valido = false;
-        while (!valido){
-            try{
-                System.out.print("Introduce la nota 2: ");
-                nota2 = sc.nextDouble();
-                if (nota2 >= 0 && nota2 <= 10){
-                    valido = true;
-                }
-            }catch (InputMismatchException e){
-                System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
-                sc.nextLine();
-            } 
-        }
-        
-        valido = false;
-        while (!valido){
-            try{
-                System.out.print("Introduce la nota 3: ");
-                nota3 = sc.nextDouble();
-                if (nota3 >= 0 && nota3 <= 10){
-                    valido = true;
-                }
-            }catch (InputMismatchException e){
-                System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
-                sc.nextLine();
-            } 
+                
+            }
+            
         }
         System.out.println("");
     }
     
     static double calcularMedia(double[] notas){
-        return (notas[0] + notas [1] + notas[2]) / 3;
+        
+        double sumaNotas = 0;
+        
+        for(int i = 0; i < notas.length; i++){
+            sumaNotas += notas[i];
+        }
+        return sumaNotas / notas.length;
+        
     }
     
     static void subirNotas(double[] notas){
+        
         for(int i = 0; i < notas.length; i++){
-        notas[i]++;
+            
+            if(notas[i] <= 9){
+                notas[i]++;
+            }
+            else{
+                notas[i] = 10;
+            }
+            
         }
     }
     
     static void mostrarNotas(double[] notas){
+        
         System.out.println("Notas finales: ");
-        for(int i=0;i<3;i++){
-            System.out.println("Nota " + (i+1) + ":" + notas[i]);
+        
+        for(int i = 0; i < notas.length; i++){
+            System.out.println("Nota " + (i+1) + ": " + notas[i]);
         }
+        
     }
     
     public static void main(String[] args) {
@@ -85,18 +78,16 @@ public class E_notasEvaluaciones {
         
         leerNotas(notas, sc);
         
-        calcularMedia(notas);
         double media = calcularMedia(notas);
         
         System.out.println("Media inicial: " + media);
-        if(media >= 8 && media < 10){
+        if(media > 8){
             subirNotas(notas);
             System.out.println("Se suma 1 punto a cada nota.");
         }
+        System.out.println("");
         
         mostrarNotas(notas);
-        
-        
-        
+       
     }
 }

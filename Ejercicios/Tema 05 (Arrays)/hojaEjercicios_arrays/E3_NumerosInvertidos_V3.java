@@ -4,33 +4,40 @@ import java.util.Scanner;
 
 public class E3_NumerosInvertidos_V3 {
     
-    static int leerNumero(){
-        Scanner sc = new Scanner(System.in);
+    static int leerNumero(Scanner sc){
+        
         int elementos = 0;
         boolean valido = false;
         
         do{
             
             try{
+                
                 elementos = sc.nextInt();
                 while(!valido){
+                    
                     if(elementos <= 0){
-                        System.out.println("Error. Tiene que haber al menos un numero.");
+                        System.out.println("Error: tiene que haber al menos un numero en los elementos.");
+                        System.out.println("Introduce cuantos numeros deseas introducir: ");
+                        elementos = sc.nextInt();
                     }
                     else{
                         valido = true; 
                     }
-                    elementos = sc.nextInt();
+                    
                 }
                 
             }catch(InputMismatchException e){
-                System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
+                
+                System.out.println("Error: solo se admiten numeros. Pruebe de nuevo.");
                 sc.nextLine();
+                
             }
             
         }while (!valido);
         
-        return elementos;        
+        return elementos;   
+        
     }
     
     public static void main(String[] args) {
@@ -39,21 +46,27 @@ public class E3_NumerosInvertidos_V3 {
 
         System.out.print("Introduce cuantos numeros deseas introducir: ");
         
-        int [] numeros = new int [leerNumero()];
+        int [] numeros = new int [leerNumero(sc)];
         
         for(int i = 0; i < numeros.length; i++){
             
             boolean valido = false;
             
             do{
+                
                 try{
+                    
                     System.out.print("Introduce el elemento " + (i + 1) + ":");
                     numeros[i] = sc.nextInt();  
                     valido = true;
+                    
                 } catch (InputMismatchException e){
-                    System.out.println("Error. Solo se admiten numeros. Pruebe de nuevo.");
+                    
+                    System.out.println("Error: solo se admiten numeros. Pruebe de nuevo.");
                     sc.nextLine();
-                }  
+                    
+                }
+                
             }while(!valido);
             
         }

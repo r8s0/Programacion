@@ -10,12 +10,9 @@ public class E3_NumerosInvertidos_V3 {
         boolean valido = false;
         
         do{
-            
             try{
-                
                 elementos = sc.nextInt();
                 while(!valido){
-                    
                     if(elementos <= 0){
                         System.out.println("Error: tiene que haber al menos un numero en los elementos.");
                         System.out.println("Introduce cuantos numeros deseas introducir: ");
@@ -24,18 +21,12 @@ public class E3_NumerosInvertidos_V3 {
                     else{
                         valido = true; 
                     }
-                    
                 }
-                
             }catch(InputMismatchException e){
-                
                 System.out.println("Error: solo se admiten numeros. Pruebe de nuevo.");
                 sc.nextLine();
-                
             }
-            
         }while (!valido);
-        
         return elementos;   
         
     }
@@ -53,21 +44,15 @@ public class E3_NumerosInvertidos_V3 {
             boolean valido = false;
             
             do{
-                
                 try{
-                    
                     System.out.print("Introduce el elemento " + (i + 1) + ":");
                     numeros[i] = sc.nextInt();  
                     valido = true;
-                    
                 } catch (InputMismatchException e){
-                    
                     System.out.println("Error: solo se admiten numeros. Pruebe de nuevo.");
                     sc.nextLine();
-                    
                 }
-                
-            }while(!valido);
+            }while(!valido); 
             
         }
         System.out.println("");
@@ -76,7 +61,6 @@ public class E3_NumerosInvertidos_V3 {
         for(int i = (numeros.length - 1); i >= 0; i--){
             
             System.out.println("enteros [" + i + "] = " + numeros[i]);
-        
         }
         
     }
